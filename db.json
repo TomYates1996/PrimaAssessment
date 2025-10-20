@@ -1,0 +1,25 @@
+{
+    "users": [
+        {
+            "name" : "Alice",
+            "email" : "alice@prima.uk",
+            "role" : "Admin",
+            "profile_picture" : "https://ui-avatars.com/api/?background=0D8ABC&color=fff&name=alice",
+            "status" : "active"
+        },
+        {
+            "name" : "Bob",
+            "email" : "bob@prima.uk",
+            "role" : "Editor",
+            "profile_picture" : "https://ui-avatars.com/api/?background=0D8ABC&color=fff&name=bob",
+            "status" : "inactive"
+        },
+        {
+            "name" : "Fred",
+            "email" : "fred@prima.uk",
+            "role" : "Viewer",
+            "profile_picture" : "https://ui-avatars.com/api/?background=0D8ABC&color=fff&name=fred",
+            "status" : "active"
+        }
+    ]
+}
