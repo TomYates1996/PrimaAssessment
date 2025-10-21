@@ -1,4 +1,5 @@
-export type Role = 'Admin' | 'Editor' | 'Viewer';
+export const ROLES = ["Admin", "Editor", "Viewer"] as const;
+export type Role = typeof ROLES[number];
 export type Status = 'active' | 'inactive';
 
 export interface User {
