@@ -16,7 +16,7 @@ export default function SearchBox({
     return (
         <div className={styles.wrapper}>
             <label htmlFor={id} className={styles.label}>Search Users</label>
-            <div className={styles.field}>
+            <div className={styles.searchBar}>
                 <input id={id} type="search" value={value} onChange={(e) => onChange(e.target.value)} placeholder={placeholder} className={styles.input}/>
                 {value && (
                 <button type="button" aria-label="Clear search" className={styles.clear} onClick={() => onChange("")}>x</button>

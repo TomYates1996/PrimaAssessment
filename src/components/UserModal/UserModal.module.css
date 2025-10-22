@@ -1,0 +1,52 @@
+.modalWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background-color: #0000005b;
+    padding: 24px;
+}
+
+.modalInner {
+    border-radius: 2rem;
+    background-color: var(--white);
+    max-height: 500px;
+    border: 1px solid var(--mid-grey);
+    overflow: scroll;
+    flex-direction: column;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.userIcon {
+    border-radius: 100%;
+    margin: 0px auto;
+}
+
+.closeModal {
+    background-color: var(--mid-grey);
+    border-radius: 0px;
+    font-weight: 700;
+    border-bottom-left-radius: 20px;
+    margin-left: auto;
+}
+
+.textSection {
+    display: flex;
+    flex-direction: column;
+    padding: 16px 20px 20px;
+    gap: 10px;
+}
+
+.nameEmail {
+}
+
+.userName {
+    font-size: 1.625rem;
+}

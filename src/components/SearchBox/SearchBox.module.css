@@ -1,0 +1,38 @@
+.wrapper {
+    display: flex; 
+    gap: 10px;
+    align-items: center;
+}
+
+.label {
+    color: var(--primary-colour);
+    line-height: 1.6;
+    font-size: 1.25rem;
+}
+
+.searchBar {
+    display: flex;
+    align-items: center;
+    gap: 0px;
+}
+
+.input {
+    border: 2px solid var(--secondary-colour);
+    border-radius: 2rem;
+    overflow: hidden;
+    padding: 10px 14px;
+    font-size: 1rem;
+    &:focus {
+        outline: 1px solid var(--secondary-colour);
+    }
+}
+
+.clear {
+    background-color: transparent;
+    border: none;
+    padding: 10px;
+    font-size: 1.25rem;
+    &:hover {
+        color: var(--primary-colour);
+    }
+}

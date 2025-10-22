@@ -1,4 +1,5 @@
 import type { User } from "../../types/user";
+import styles from "./UserItem.module.css";
 
 export function UserItem({
     user,
@@ -8,10 +9,14 @@ export function UserItem({
     onClick?: ( u : User ) => void;
     }) {
     return (
-        <button type="button" className="user-item" onClick={() => onClick?.(user)}>
-            <img src={user.profile_picture} alt="" width={40} height={40} aria-hidden="true"/>
-            <div className="user-text">
-                <p>{user.name} — {user.email} ({user.role})</p>
+        <button type="button" className={styles.userItemInner} onClick={() => onClick?.(user)}>
+            <img className={styles.icon} src={user.profile_picture} alt="" width={40} height={40} aria-hidden="true"/>
+            <div className={styles.userText}>
+                <div className={styles.nameSpan}>
+                    <p className={styles.name}>{user.name}</p>
+                    <p className={styles.email}>{user.email}</p>
+                </div>
+                <p className={styles.role}>({user.role})</p>
             </div>
         </button>
     );

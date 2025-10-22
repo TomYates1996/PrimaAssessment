@@ -1,0 +1,100 @@
+.usersSection {
+    display: flex;
+    width: 100%;
+    padding: 20px;
+    flex: 1;
+    max-height: 100dvh;
+}
+
+.sectionInner {
+    overflow: scroll;
+    display: flex;        
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    background-color: var(--light-grey);
+    width: 100%;
+    border-radius: 40px;
+    padding: 2rem;
+    gap: 10px;
+}
+
+.leftWrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    gap: 10px;
+}
+
+.filters {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.title {
+    color: var(--text-dark);
+    font-size: 2.25rem;
+    line-height: 1.19;
+}
+
+.usersInner {
+    display: flex;
+    width: 100%;
+    border: 1px solid var(--mid-grey);
+    overflow: auto;
+    border-radius: 2rem;
+    max-height: 500px;
+    min-height: 140px;
+    background-color: var(--white);
+}
+
+.clearButton {
+    background-color: transparent;
+    padding: 0px;
+    font-size: .875rem;
+    border: none;
+    &:hover {
+        border: none;
+        text-decoration: underline;
+    }
+}
+
+@media screen and (min-width: 40em) {
+    .sectionInner {
+        border-radius: 4rem;
+        padding: 2.5rem;
+    }
+    .title {
+        font-size: 2.75rem;
+    }
+}
+@media screen and (min-width: 64em) {
+    .usersSection {
+        padding: 1.25rem 3rem;
+    }
+    .sectionInner {
+        border-radius: 5rem;
+        padding: 4rem;
+        flex-direction: row;
+    }
+    .usersInner {
+        min-height: 500px;
+    }
+    .title {
+        font-size: 4rem;
+    }
+}
+@media screen and (min-width: 81em) {
+    .usersSection {
+        padding: 1.25rem 5rem;
+    }
+    .sectionInner {
+        border-radius: 8rem;
+        padding: 5rem;
+    }
+}

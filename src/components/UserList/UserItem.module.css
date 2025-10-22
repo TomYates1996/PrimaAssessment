@@ -1,0 +1,48 @@
+.userItemInner {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    gap: 16px;
+    border: none;
+    border-radius: 0px;
+    background-color: transparent;
+    color: var(--dark-grey);
+    padding: 1rem 1.2rem;
+    background-color: var(--white);
+    &:hover {
+        background-color: var(--tertiary-colour);
+        color: var(--white);
+        .icon {
+            outline: 2px solid var(--white);
+        }
+    }
+}
+
+.icon {
+    border-radius: 100%;
+}
+
+.userText {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nameSpan {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 3px;
+}
+
+.name {
+    font-size: 1.125rem;
+    font-weight: 700;
+}
+
+.email {
+    font-size: .875rem;
+}
