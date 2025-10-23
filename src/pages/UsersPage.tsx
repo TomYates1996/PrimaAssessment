@@ -12,19 +12,19 @@ export function UsersPage({
     error = null, 
 }: { users: User[]; loading?: boolean; error?: string | null }) {
     const [searchInput, setSearchInput] = useState("");
-    const [role, setRole] = useState<Role | "All">("All");
+    const [role, setRole] = useState<Role | "All roles">("All roles");
     const [selectedUser, setSelectedUser] = useState<User | null>(null);
 
     const visible = users.filter(user => {
         const term = searchInput.trim().toLowerCase();
-        const matchRole = role === "All" || user.role === role;
+        const matchRole = role === "All roles" || user.role === role;
         const matchName = !term || user.name.toLowerCase().includes(term);
         return matchRole && matchName;
     });
 
     function clearAll() {
         setSearchInput("");
-        setRole("All");
+        setRole("All roles");
     }
 
     return (
@@ -34,11 +34,13 @@ export function UsersPage({
                     <div className={styles.leftWrap}>
                         <h1 className={styles.title}>Users list</h1>
                         <div className={styles.filters}>
-                            <SearchBox value={searchInput} onChange={setSearchInput} placeholder="Search for name…"/>
-                            <RoleFilter value={role} onChange={setRole} />
-                            <button className={styles.clearButton} type="button" onClick={clearAll} aria-label="Clear all filters">
-                                Clear filters
-                            </button>
+                            <SearchBox value={searchInput} onChange={setSearchInput}/>
+                            <div className={styles.filterRow}>
+                                <RoleFilter value={role} onChange={setRole} />
+                                <button className={styles.clearButton} type="button" onClick={clearAll} aria-label="Clear all filters">
+                                    Clear filters
+                                </button>
+                            </div>
                         </div>
                     </div>
                     {selectedUser && (

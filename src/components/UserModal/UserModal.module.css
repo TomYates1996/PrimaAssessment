@@ -9,12 +9,13 @@
     bottom: 0px;
     background-color: #0000005b;
     padding: 24px;
+    overflow: scroll;
 }
 
 .modalInner {
     border-radius: 2rem;
     background-color: var(--white);
-    max-height: 500px;
+    min-height: 500px;
     border: 1px solid var(--mid-grey);
     overflow: scroll;
     flex-direction: column;
@@ -22,6 +23,7 @@
     justify-content: flex-start;
     align-items: flex-start;
     width: 100%;
+    max-width: 800px;
 }
 
 .userIcon {
@@ -35,6 +37,12 @@
     font-weight: 700;
     border-bottom-left-radius: 20px;
     margin-left: auto;
+    padding: 16px;
+    &:hover {
+        background-color: var(--dark-grey);
+        border-color: var(--dark-grey);
+        color: var(--white);
+    }
 }
 
 .textSection {
@@ -42,6 +50,9 @@
     flex-direction: column;
     padding: 16px 20px 20px;
     gap: 10px;
+    position: relative;
+    width: 100%;
+    margin-top: 20px;
 }
 
 .nameEmail {
@@ -49,4 +60,10 @@
 
 .userName {
     font-size: 1.625rem;
+}
+
+@media screen and (min-width: 40em) {
+    .textSection {
+        padding: 16px 30px 30px;
+    }
 }

@@ -4,6 +4,7 @@
     padding: 20px;
     flex: 1;
     max-height: 100dvh;
+    height: 100%;
 }
 
 .sectionInner {
@@ -34,6 +35,12 @@
     justify-content: flex-start;
     align-items: flex-start;
     gap: 10px;
+}
+
+.filterRow {
+    display: flex;
+    gap: 20px;
+    align-items: flex-end;
 }
 
 .title {
@@ -72,6 +79,11 @@
     .title {
         font-size: 2.75rem;
     }
+    .filters {
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: flex-start;
+    }
 }
 @media screen and (min-width: 64em) {
     .usersSection {
@@ -88,13 +100,20 @@
     .title {
         font-size: 4rem;
     }
+    .filters {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }
 @media screen and (min-width: 81em) {
     .usersSection {
         padding: 1.25rem 5rem;
+        justify-content: center;
+        align-items: center;
     }
     .sectionInner {
         border-radius: 8rem;
         padding: 5rem;
+        max-width: 1280px;
     }
 }

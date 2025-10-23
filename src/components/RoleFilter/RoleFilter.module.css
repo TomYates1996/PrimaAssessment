@@ -9,8 +9,25 @@
         border-radius: 2rem;
         border: 2px solid var(--secondary-colour);
         background-color: var(--white);
-        padding: 6px 10px;
+        padding: 10px 14px;
         font-size: 1rem;
         cursor: pointer;
+        color: var(--dark-grey);
+        option {
+            color: var(--black);
+            cursor: pointer;
+            &:nth-of-type(1) {
+                color: var(--dark-grey);
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 40em) {
+    .wrapper {
+        flex-direction: column;
+        gap: 4px;
+        align-items: flex-start;
+        justify-content: flex-end;
     }
 }

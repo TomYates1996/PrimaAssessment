@@ -10,7 +10,7 @@ export function UsersList({
         onSelectUser?: (user: User) => void;
 }) 
 {
-    if (users.length === 0) return <p>No users found.</p>;
+    if (users.length === 0) return <p className={styles.noUsers}>No users found.</p>;
     return (
             <ul className={styles.userList}>
             {users.map((user) => (
