@@ -1,73 +1,19 @@
-# React + TypeScript + Vite
+### Setup Instructions:
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+1. **Clone** the repository to your local machine.
+2. Run the following command to install the required dependencies:
+   ```bash
+   npm install
+   npm start
 
-Currently, two official plugins are available:
+### Technology choices
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+For the frontend, I’ve used React with TypeScript, with Vite as the build tool.
+For the backend, I set up a quick JSON server with a database file.
+The styling uses plain CSS, scoped within React modules.
 
-## React Compiler
+### Reasoning
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+React and TypeScript were chosen as they were explicitly mentioned in the requirements. Both are lightweight and efficient for building frontend applications.
+Given that the project was focused on the frontend, I opted to use a JSON server, with a local database file, keeping things simple. Rather than setting up a more complex backend with Node.js or Laravel. 
+For styling, I chose plain CSS packed into React CSS modules over frameworks like Tailwind for flexibility and to avoid unnecessary bloat. As the project was relatively small, integrating a large CSS framework like Tailwind would have increased the project size without much benefit hence my choice for plain CSS. 
