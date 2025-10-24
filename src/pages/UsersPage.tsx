@@ -5,6 +5,7 @@ import SearchBox from "../components/SearchBox/SearchBox";
 import RoleFilter from "../components/RoleFilter/RoleFilter";
 import styles from "./UsersPage.module.css";
 import { UserModal } from "../components/UserModal/UserModal";
+import DarkModeToggle from "../components/DarkModeToggle/DarkModeToggle";
 
 export function UsersPage({ 
     users,
@@ -29,6 +30,7 @@ export function UsersPage({
 
     return (
         <main className="page">
+            <DarkModeToggle />
             <section className={styles.usersSection}>
                 <div className={styles.sectionInner}>
                     <div className={styles.leftWrap}>

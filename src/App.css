@@ -28,27 +28,25 @@
     --list-item-hover: var(--tertiary-colour);
 }
 
-@media (prefers-color-scheme: dark) {
-    :root {
-        --dark-grey: #282828;
-        --text-colour: var(--white);
-        --background-colour: var(--black);
-        --background-colour-alt: var(--dark-grey);
-        --text-alt: var(--white);
+.dark {
+    --dark-grey: #282828;
+    --text-colour: var(--white);
+    --background-colour: var(--black);
+    --background-colour-alt: var(--dark-grey);
+    --text-alt: var(--white);
 
-        --border-colour: var(--dark-grey);
-        --border-colour-alt: var(--mid-grey);
-        --border-alt-hover: var(--primary-colour);
-        --outline-focus: #8234c296;
+    --border-colour: var(--dark-grey);
+    --border-colour-alt: var(--mid-grey);
+    --border-alt-hover: var(--primary-colour);
+    --outline-focus: #8234c296;
 
-        --input-background: var(--dark-grey);
-        --input-colour: var(--white);
-        --input-placeholder-colour: var(--light-grey);
-
-        --list-item-text: var(--white);
-        --list-item-hover: #333333;
-    }
+    --input-background: var(--dark-grey);
+    --input-colour: var(--white);
+    --input-placeholder-colour: var(--light-grey);
+    --list-item-text: var(--white);
+    --list-item-hover: #333333;
 }
+
 
 @media screen and (min-width: 40em) {
     :root {

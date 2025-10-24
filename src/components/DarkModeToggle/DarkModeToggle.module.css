@@ -1,0 +1,121 @@
+.darkModeOuter {
+    position: absolute;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    font-size: 30px;
+    border: none;
+    padding: 0px;
+    background-color: #3fcfff;
+    max-height: 60px;    
+    padding-top: 6px;
+    width: 100px;
+    overflow: hidden;
+    transition: all 0.8s ease;
+    border: 2px solid var(--secondary-colour);
+    margin-left: auto;
+    top: 10px;
+    right: 10px;
+    &::after {
+        content: '';
+        position: absolute;
+        transition: all 0.8s ease;
+        top: calc(100% - 10px);
+        background-color: #3fed00;
+        height: 50px;
+        width: 50px;
+        border-radius: 100%;
+    }
+    &::before {
+        content: '';
+        position: absolute;
+        width: 2px;
+        height: 2px;
+        background: white;
+        transition: all 0.8s ease;
+        border-radius: 50%;
+        opacity: 0;
+        box-shadow:
+            -19px 10px white,
+            -20px 20px white,
+            -40px 30px white,
+            -34px 0px white,
+            5px 10px white,
+            18px 20px white,
+            25px 5px white,
+            35px 30px white,
+            45px 10px white;
+        animation: fadeStars 3s forwards;
+    }
+}
+
+.icons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform-origin: center center;
+    gap: 0px;
+    width: 100%;
+    p {
+        height: 100%;
+        width: 100%;
+        position: relative;
+        padding: 10px 0px 0px 0px;
+        overflow: hidden;
+        &:first-of-type {
+            padding: 0px 0px 10px 0px;
+        }
+    }
+}
+
+@keyframes rotateClockwise {
+    from { 
+        transform: rotate(0deg); 
+    }
+    to { 
+        transform: rotate(-180deg); 
+    }
+}
+
+@keyframes rotateAntiClockwise {
+    from { 
+        transform: rotate(-180deg); 
+    }
+    to { 
+        transform: rotate(-360deg);
+    }
+}
+
+.active {
+    background-color: #222222;
+    border-color: var(--primary-colour);
+    &:after {
+        background-color: #26522d;
+    }
+    &::before {
+        width: 2px;
+        height: 2px;
+        border-radius: 50%;
+        opacity: 1;
+        box-shadow:
+            -19px 10px white,
+            -20px 20px white,
+            -40px 30px white,
+            -34px 0px white,
+            5px 10px white,
+            18px 20px white,
+            25px 5px white,
+            35px 30px white,
+            45px 10px white;
+        animation: fadeStars 3s forwards;
+    }
+}
+
+.active .icons {
+  animation: rotateClockwise 0.8s forwards;
+}
+
+.inactive .icons {
+    animation: rotateAntiClockwise 0.8s forwards;
+}

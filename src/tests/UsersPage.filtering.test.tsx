@@ -45,7 +45,6 @@ describe('SearchBox', () => {
     });
 });
 
-
 describe('RoleFilter', () => {
     it('filters users by selected role only', async () => {
         const user = userEvent.setup();
@@ -55,9 +54,8 @@ describe('RoleFilter', () => {
         expect(screen.getByText('Dave')).toBeInTheDocument();
         expect(screen.getByText('Frank')).toBeInTheDocument();
 
-        const roleSelect = screen.getByLabelText(/role/i);
-
-        await user.selectOptions(roleSelect, 'Editor');
+        const roleSelect = screen.getByRole('button', { name: 'Editor' });
+        await user.click(roleSelect);
 
         expect(screen.getByText('Dave')).toBeInTheDocument();
         expect(screen.getByText('Frank')).toBeInTheDocument();
@@ -69,17 +67,17 @@ describe('RoleFilter', () => {
         render(<UsersPage users={users} />);
 
         const searchInput = screen.getByPlaceholderText(/search/i);
-        const roleSelect = screen.getByLabelText(/role/i);
 
         await user.type(searchInput, 'a');
-        await user.selectOptions(roleSelect, 'Editor');
+
+        const roleSelect = screen.getByRole('button', { name: 'Editor' });
+        await user.click(roleSelect);
 
         expect(screen.getByText('Dave')).toBeInTheDocument();
         expect(screen.getByText('Frank')).toBeInTheDocument();
         expect(screen.queryByText('Doug')).not.toBeInTheDocument();
 
-        const visibleUsers = screen.getAllByText(/@/i);
-
+        const visibleUsers = screen.getAllByText(/@/i); 
         expect(visibleUsers.length).toBe(2);
     });
 });
