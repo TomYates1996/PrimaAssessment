@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { describe, it, expect } from 'vitest';
-import { UsersPage } from '../pages/UsersPage';
+import UsersPage from '../pages/UsersPage';
 
 const users = [
     { id: '1', name: 'Doug',  email: 'doug@prima.uk',  role: 'Admin' },

@@ -1,17 +1,19 @@
 import { useState } from "react";
 import type { User, Role } from "../types/user";
-import { UsersList } from "../components/UserList/UsersList";
+import UsersList from "../components/UserList/UsersList";
 import SearchBox from "../components/SearchBox/SearchBox";
 import RoleFilter from "../components/RoleFilter/RoleFilter";
 import styles from "./UsersPage.module.css";
-import { UserModal } from "../components/UserModal/UserModal";
+import UserModal from "../components/UserModal/UserModal";
 import DarkModeToggle from "../components/DarkModeToggle/DarkModeToggle";
 
-export function UsersPage({ 
-    users,
-    loading = false,
-    error = null, 
-}: { users: User[]; loading?: boolean; error?: string | null }) {
+type Props = {
+    users: User[];
+    loading?: boolean;
+    error?: string | null;
+};
+
+export default function UsersPage({ users, loading = false, error = null }: Props) {
     const [searchInput, setSearchInput] = useState("");
     const [role, setRole] = useState<Role | "All roles">("All roles");
     const [selectedUser, setSelectedUser] = useState<User | null>(null);

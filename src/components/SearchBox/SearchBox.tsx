@@ -6,10 +6,7 @@ type Props = {
     onChange: (value: string) => void;
 };
 
-export default function SearchBox({
-    value,
-    onChange,
-    }: Props) {
+export default function SearchBox({ value, onChange,}: Props) {
     const id = useId();
     return (
         <div className={styles.wrapper}>

@@ -7,7 +7,7 @@ type Props = {
     onClose?: (user: User) => void; 
 };
 
-export function UserModal({ user, onClose }: Props) {
+export default function UserModal({ user, onClose }: Props) {
 
     useEffect(() => {
         const handleKeyDown = (e: KeyboardEvent) => {
@@ -20,7 +20,7 @@ export function UserModal({ user, onClose }: Props) {
     return (
         <div className={styles.modalWrapper} onClick={onClose}>
             <section className={styles.modalInner} onClick={(e) => e.stopPropagation()}>
-                <button className={styles.closeModal} type="button" onClick={() => onClose?.(user)}>X</button>
+                <button className={styles.closeModal} type="button" onClick={() => onClose?.(user)} aria-label="Close user details">X</button>
                 <img className={styles.userIcon} src={user.profile_picture} alt="" height={80} width={80} />
                 <div className={styles.textSection}>
                     <div className={styles.nameEmail}>

@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import { describe, it, expect } from 'vitest';
-import { UsersList } from '../components/UserList/UsersList';
+import UsersList from '../components/UserList/UsersList';
 
 const users = [
     { id: '1', name: 'John', email: 'john@prima.uk', role: 'Admin' },

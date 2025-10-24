@@ -2,13 +2,12 @@ import type { User } from "../../types/user";
 import { UserItem } from "./UserItem";
 import styles from "./UsersList.module.css";
 
-export function UsersList({
-    users,
-    onSelectUser,
-    }: {
-        users: User[];
-        onSelectUser?: (user: User) => void;
-}) 
+type Props = { 
+    users: User[];
+    onSelectUser?: (user: User) => void;
+};
+
+export default function UsersList({ users, onSelectUser }: Props ) 
 {
     if (users.length === 0) return <p className={styles.noUsers}>No users found.</p>;
     return (
