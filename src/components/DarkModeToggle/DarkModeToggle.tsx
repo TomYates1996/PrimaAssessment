@@ -22,7 +22,7 @@ export default function DarkModeToggle() {
     return (
         <button className={`${styles.darkModeOuter} ${!darkMode ? styles.inactive : styles.active}`} onClick={() => setDarkMode(!darkMode)} aria-label={darkMode ? "Swap to light mode" : "Swap to dark mode"}>
             <span className={styles.icons}>
-                <p>🌞</p>
+                <p>☀️</p>
                 <p>🌑</p>
             </span>
         </button>
