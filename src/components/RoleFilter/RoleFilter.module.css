@@ -5,21 +5,31 @@
     .label {
         color: var(--black);
     }
-    .select {
-        border-radius: 2rem;
-        border: 2px solid var(--secondary-colour);
-        background-color: var(--white);
-        padding: 10px 14px;
-        font-size: 1rem;
-        cursor: pointer;
-        color: var(--dark-grey);
-        option {
-            color: var(--black);
-            cursor: pointer;
-            &:nth-of-type(1) {
-                color: var(--dark-grey);
-            }
-        }
+}
+
+.buttonWrap {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.roleButton {
+    border-radius: 2rem;
+    border: 2px solid var(--border-colour-alt);
+    background-color: var(--white);
+    padding: 10px 14px;
+    font-size: 1rem;
+    cursor: pointer;
+    color: var(--border-alt-hover);
+    font-weight: 600;
+    transition: all 0.2s ease;
+    &.active,
+    &:hover {
+        border-color: var(--border-alt-hover);
+    }
+    &:focus {
+        outline: 2px solid var(--outline-focus);
+        border-color: var(--border-alt-hover);
     }
 }
 

@@ -7,25 +7,26 @@
     border: none;
     border-radius: 0px;
     background-color: transparent;
-    color: var(--dark-grey);
+    color: var(--list-item-text);
     padding: 1rem 1.2rem;
-    background-color: var(--white);
+    background-color: var(--background-colour);
     &:focus-visible {
         outline: none;
     }
     &:focus, 
     &:hover {
-        background-color: var(--tertiary-colour);
+        background-color: var(--list-item-hover);
 
-        color: var(--white);
+        color: var(--list-item-text-hover);
         .icon {
-            outline: 2px solid var(--white);
+            outline: 2px solid var(--list-item-text-hover);
         }
     }
 }
 
 .icon {
     border-radius: 100%;
+    outline: 2px solid var(--list-item-text-hover);
 }
 
 .userText {

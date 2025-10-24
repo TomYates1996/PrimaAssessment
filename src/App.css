@@ -7,11 +7,47 @@
     --light-grey: #F3F4F4;
     --white: #ffffff;
     --black: #000000;
-    --text-main: var(--black);
-    --text-secondary: var(--white);
 
-    --text-dark: var(--tertiary-colour);
-    --text-light: var(--white);
+    --background-colour: var(--white);
+    --background-colour-alt: var(--light-grey);
+
+    --text-colour: var(--black);
+    --text-alt: var(--primary-colour);
+
+    --border-colour: var(--dark-grey);
+    --border-colour-alt: var(--mid-grey);
+    --border-alt-hover: var(--secondary-colour);
+    --outline-focus: #067e96;
+
+    --input-background: var(--white);
+    --input-colour: var(--black);
+    --input-placeholder-colour: var(--dark-grey);
+
+    --list-item-text: var(--dark-grey);
+    --list-item-text-hover: var(--white);
+    --list-item-hover: var(--tertiary-colour);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --dark-grey: #282828;
+        --text-colour: var(--white);
+        --background-colour: var(--black);
+        --background-colour-alt: var(--dark-grey);
+        --text-alt: var(--white);
+
+        --border-colour: var(--dark-grey);
+        --border-colour-alt: var(--mid-grey);
+        --border-alt-hover: var(--primary-colour);
+        --outline-focus: #8234c296;
+
+        --input-background: var(--dark-grey);
+        --input-colour: var(--white);
+        --input-placeholder-colour: var(--light-grey);
+
+        --list-item-text: var(--white);
+        --list-item-hover: #333333;
+    }
 }
 
 @media screen and (min-width: 40em) {
@@ -34,12 +70,15 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    &:focus {
+        outline: 2px solid var(--outline-focus);
+    }
 }
 
 body, html, #root {
     height: 100%;
-    background-color: var(--white);
-    color: var(--text-main);
+    background-color: var(--background-colour);
+    color: var(--text-colour);
     width: 100%;
     font-family: Circular,Arial,sans-serif;
 }
@@ -48,7 +87,7 @@ body, html, #root {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    background-color: var(--white);
+    background-color: var(--background-colour);
     width: 100%;
     height: 100%;
 }

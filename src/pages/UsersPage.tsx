@@ -35,20 +35,18 @@ export function UsersPage({
                         <h1 className={styles.title}>Users list</h1>
                         <div className={styles.filters}>
                             <SearchBox value={searchInput} onChange={setSearchInput}/>
-                            <div className={styles.filterRow}>
-                                <RoleFilter value={role} onChange={setRole} />
-                                <button className={styles.clearButton} type="button" onClick={clearAll} aria-label="Clear all filters">
-                                    Clear filters
-                                </button>
-                            </div>
+                            <RoleFilter value={role} onChange={setRole} />
+                            <button className={styles.clearButton} type="button" onClick={clearAll} aria-label="Clear all filters">
+                                Reset filters
+                            </button>
                         </div>
                     </div>
                     {selectedUser && (
                         <UserModal user={selectedUser} onClose={() => setSelectedUser(null)} />
                     )}
                     <section className={styles.usersInner}>
-                        {loading && <p>Loading…</p>}
-                        {!loading && error && <p role="alert">Error: {error}</p>}
+                        {loading && <p className={styles.loadErrorP}>Loading…</p>}
+                        {!loading && error && <p role="alert" className={styles.loadErrorP}>Error: {error}</p>}
                         {!loading && !error && <UsersList users={visible} onSelectUser={setSelectedUser} />}
                     </section>
                 </div>

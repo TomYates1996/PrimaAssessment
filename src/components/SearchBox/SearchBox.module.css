@@ -7,7 +7,7 @@
 }
 
 .label {
-    color: var(--primary-colour);
+    color: var(--text-alt);
     line-height: 1.6;
     font-size: 1.25rem;
 }
@@ -19,16 +19,23 @@
 }
 
 .input {
-    border: 2px solid var(--secondary-colour);
-    border-radius: 2rem;
+    border: 2px solid var(--border-colour-alt);
+    border-radius: 0.5rem;
     overflow: hidden;
     padding: 10px 14px;
     font-size: 1rem;
+    background-color: var(--input-background);
+    color: var(--input-colour);
+    transition: all 0.2s ease;
+    &:hover {
+        border-color: var(--border-alt-hover);
+    }
     &::placeholder {
-        color: var(--dark-grey);
+        color: var(--input-placeholder-colour);
     }
     &:focus {
-        outline: 1px solid var(--primary-colour);
+        outline: 2px solid var(--outline-focus);
+        border-color: var(--border-alt-hover);
     }
 }
 
@@ -40,5 +47,8 @@
 @media screen and (min-width: 64em) {
     .label {
         font-size: 1.5rem;
+    }
+    .input {
+        width: 280px;
     }
 }

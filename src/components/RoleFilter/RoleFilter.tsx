@@ -11,12 +11,14 @@ const roleOptions = ["All roles", ...ROLES];
 export default function RoleFilter({ value, onChange }: Props) {
     return (
         <div className={styles.wrapper}>
-            <label className='hidden' htmlFor="role-filter">Role</label>
-            <select id="role-filter" className={styles.select} value={value} onChange={(e) => onChange(e.target.value as Role | "All roles")}>
+            <label className="hidden">Role</label>
+            <div className={styles.buttonWrap}>
                 {roleOptions.map((role) => (
-                    <option className={styles.option} key={role} value={role}>{role}</option>
+                    <button key={role} type="button" className={`${styles.roleButton} ${value === role ? styles.active : ""}`} onClick={() => onChange(role as Role | "All roles")}>
+                        {role}
+                    </button>
                 ))}
-            </select>
+            </div>
         </div>
     );
 }
