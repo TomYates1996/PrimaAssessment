@@ -37,18 +37,19 @@ export default function UsersPage({ users, loading = false, error = null }: Prop
                 <div className={styles.sectionInner}>
                     <div className={styles.leftWrap}>
                         <h1 className={styles.title}>Users list</h1>
-                        <div className={styles.filters}>
+                        <fieldset className={styles.filters}>
+                            <legend className="hidden">Filter Users</legend>
                             <SearchBox value={searchInput} onChange={setSearchInput}/>
                             <RoleFilter value={role} onChange={setRole} />
-                            <button className={styles.clearButton} type="button" onClick={clearAll} aria-label="Clear all filters">
+                            <button className={styles.clearButton} type="button" onClick={clearAll} aria-label="Clear filters">
                                 Reset filters
                             </button>
-                        </div>
+                        </fieldset>
                     </div>
                     {selectedUser && (
                         <UserModal user={selectedUser} onClose={() => setSelectedUser(null)} />
                     )}
-                    <section className={styles.usersInner}>
+                    <section className={styles.usersInner} aria-live="polite">
                         {loading && <p className={styles.loadErrorP}>Loading…</p>}
                         {!loading && error && <p role="alert" className={styles.loadErrorP}>Error: {error}</p>}
                         {!loading && !error && <UsersList users={visible} onSelectUser={setSelectedUser} />}

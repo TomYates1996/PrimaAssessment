@@ -6,7 +6,7 @@
             "email" : "alice@prima.uk",
             "role" : "Admin",
             "profile_picture" : "https://ui-avatars.com/api/?background=0D8ABC&color=fff&name=alice",
-            "status" : "active"
+            "status" : "Active"
         },
         {
             "id" : 2,
@@ -14,7 +14,7 @@
             "email" : "bob@prima.uk",
             "role" : "Editor",
             "profile_picture" : "https://ui-avatars.com/api/?background=0D8ABC&color=fff&name=bob",
-            "status" : "inactive"
+            "status" : "Inactive"
         },
         {
             "id" : 3,
@@ -22,7 +22,7 @@
             "email" : "fred@prima.uk",
             "role" : "Viewer",
             "profile_picture" : "https://ui-avatars.com/api/?background=0D8ABC&color=fff&name=fred",
-            "status" : "active"
+            "status" : "Active"
         },
         {
             "id" : 4,
@@ -30,7 +30,7 @@
             "email" : "andrew@prima.uk",
             "role" : "Admin",
             "profile_picture" : "https://ui-avatars.com/api/?background=0D8ABC&color=fff&name=andrew",
-            "status" : "active"
+            "status" : "Archived"
         },
         {
             "id" : 5,
@@ -38,7 +38,7 @@
             "email" : "peter@prima.uk",
             "role" : "Editor",
             "profile_picture" : "https://ui-avatars.com/api/?background=0D8ABC&color=fff&name=peter",
-            "status" : "inactive"
+            "status" : "Inactive"
         },
         {
             "id" : 6,
@@ -46,7 +46,7 @@
             "email" : "kenneth@prima.uk",
             "role" : "Viewer",
             "profile_picture" : "https://ui-avatars.com/api/?background=0D8ABC&color=fff&name=kenneth",
-            "status" : "active"
+            "status" : "Active"
         },
         {
             "id" : 7,
@@ -54,7 +54,7 @@
             "email" : "doug@prima.uk",
             "role" : "Admin",
             "profile_picture" : "https://ui-avatars.com/api/?background=0D8ABC&color=fff&name=doug",
-            "status" : "active"
+            "status" : "Active"
         },
         {
             "id" : 8,
@@ -62,7 +62,7 @@
             "email" : "gary@prima.uk",
             "role" : "Editor",
             "profile_picture" : "https://ui-avatars.com/api/?background=0D8ABC&color=fff&name=gary",
-            "status" : "inactive"
+            "status" : "Inactive"
         },
         {
             "id" : 9,
@@ -70,7 +70,7 @@
             "email" : "ian@prima.uk",
             "role" : "Viewer",
             "profile_picture" : "https://ui-avatars.com/api/?background=0D8ABC&color=fff&name=ian",
-            "status" : "active"
+            "status" : "Archived"
         },
         {
             "id" : 10,
@@ -78,7 +78,7 @@
             "email" : "alfred@prima.uk",
             "role" : "Admin",
             "profile_picture" : "https://ui-avatars.com/api/?background=0D8ABC&color=fff&name=alfred",
-            "status" : "active"
+            "status" : "Active"
         },
         {
             "id" : 11,
@@ -86,7 +86,7 @@
             "email" : "herman@prima.uk",
             "role" : "Editor",
             "profile_picture" : "https://ui-avatars.com/api/?background=0D8ABC&color=fff&name=herman",
-            "status" : "inactive"
+            "status" : "Archived"
         },
         {
             "id" : 12,
@@ -94,7 +94,7 @@
             "email" : "clive@prima.uk",
             "role" : "Viewer",
             "profile_picture" : "https://ui-avatars.com/api/?background=0D8ABC&color=fff&name=clive",
-            "status" : "active"
+            "status" : "Active"
         }
     ]
 }
